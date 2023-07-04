@@ -10,16 +10,44 @@ Applica uno stile differente a seconda del valore dell'indice per i multipli di 
 
 */
 
+//base
+// for (let i = 1; i <= 100; i++) {
+//     // condizione Fizz Buzz
+//     if ((i % 3 == 0) && (i % 5 == 0)) {
+//         console.log("FizzBuzz");
+//     } else if (i % 3 == 0) {
+//         console.log("Fizz");
+//     } else if (i % 5 == 0) {
+//         console.log("Buzz");
+//     } else {
+//         console.log(i);
+//     }
+// }
 
+
+
+//bonus
 for (let i = 1; i <= 100; i++) {
-    // condizione Fizz Buzz
+    let bgStyle = "";
+    let content = i;
+
     if ((i % 3 == 0) && (i % 5 == 0)) {
-        console.log("FizzBuzz");
+        bgStyle = "bg-danger";
+        content = "FizzBuzz";
     } else if (i % 3 == 0) {
-        console.log("Fizz");
+        bgStyle = "bg-warning";
+        content = "Fizz";
     } else if (i % 5 == 0) {
-        console.log("Buzz");
-    } else {
-        console.log(i);
+        bgStyle = "bg-success";
+        content = "Buzz";
     }
+
+    document.getElementById('squareContainer').innerHTML += `
+        <div class="square mx-auto ${bgStyle}">
+            <p class="text-center fw-bold fs-3 fw-3 h-100 vertical-align-square">${content}</p>
+        </div>
+    `;
 }
+
+
+

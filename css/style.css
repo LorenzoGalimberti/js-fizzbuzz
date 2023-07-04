@@ -1,0 +1,12 @@
+.square {
+    margin: 20px;
+    height: 200px;
+    width: 200px;
+    background-color: rgb(3, 123, 197);
+}
+
+
+.vertical-align-square {
+    line-height: 200px;
+    vertical-align: middle;
+}
